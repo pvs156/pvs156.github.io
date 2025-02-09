@@ -1,160 +1,609 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Prashanth's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Prashanth's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Explore Venkata Sai Prashanth's portfolio, featuring projects in AI, data analysis, and machine learning." />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+        .about-me-section {
+            padding: 60px 20px;
+            background-color: white;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        .about-me-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>My Portfolio</h1>
-						<p></p>A brief journey through my projects & revealing the scope of my abilites.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        .about-me-image {
+            flex: 0 0 45%;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<!--<a href="index.html" class="logo">Massively</a> -->
-					</header>
+            .about-me-image img {
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+                object-fit: cover;
+                aspect-ratio: 4/3;
+            }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Skills</a></li>
-							<li><a href="elements.html">Work Experiance</a></li>
-							<li><a href="about.html">About</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/venkata-sai-prashanth-p-317795197/" class="icon brands fa-linkedin"><span class="label">linkedin/span></a></li>
-							<li><a href="https://github.com/pvs156" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        .about-me-content {
+            flex: 0 0 55%;
+        }
 
-				<!-- Main -->
-					<div id="main">
+            .about-me-content h1 {
+                color: #00d2ff;
+                font-size: 2.2rem; /* Reduced from 3rem */
+                font-weight: bold;
+                margin-bottom: 1.5rem; /* Reduced from 2rem */
+                letter-spacing: 1px; /* Reduced from 2px */
+            }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">I'm Prashanth</a></h2>
-									<p>"Passion for learning is the spark for the fire of continuous growth." </p>
-									<p>Hobbies: I make data tell its secrets.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/myimg1.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Check out</a></li>
-								</ul>
-							</article>
+        .about-me-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem; /* Reduced from 1.5rem */
+        }
 
-						<!-- Posts -->
-						<header> <h1 style="text-align: center;">Projects</h1>
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="#">Ai Dietician</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Ai_dietician.jpg" alt="" /></a>
-									<p>AI-based dietitian is a personalized nutrition and meal planning app using AI to provide tailored dietary recommendations based on user's preferences and goals.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/pvs156/AI-Dietitian" class="button">Check out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">Placement data analysis</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/placement_data1.jpeg" alt="" /></a>
-									<p>Analyzed historical placement data to uncover trends, built predictive models, and created visualizations to strengthen campus recruitment and provide recommendations.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/pvs156/Internship-Placement_Analysis" class="button">Check out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="#">House Price Prediction</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/house_price_prediction.jpeg" alt="" /></a>
-									<p>House price prediction project: Analyzing factors influencing property pricing using ML models and historical sales data. Advanced regression techniques provide accurate market value estimates across locations, property types, and sizes.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/pvs156/House_Price_Prediction" class="button">Check Out</a></li>
-									</ul>
-								</article>
-								<!--<article>
-									<header>
-										<h2><a href="#">imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Check Out</a></li>
-									</ul>
-								</article> -->
-							</section>
+            .about-me-text p {
+                font-size: 0.65rem; /* Reduced from 1.1rem */
+                line-height: 1.6; /* Reduced from 1.8 */
+                color: #333;
+                margin: 0;
+            }
 
-						<!-- Footer -->
+            .about-me-text .intro {
+                font-size: 1.3rem; /* Reduced from 1.8rem */
+                color: #444;
+                font-weight: 500;
+                margin-bottom: 0.8rem; /* Reduced from 1rem */
+            }
 
-					</div>
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-me-container {
+                gap: 30px;
+            }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<!--<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section> -->
+            .about-me-content h1 {
+                font-size: 2rem;
+            }
+        }
 
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(945)-246-7782</a></p>
-							</section>
+        @media (max-width: 768px) {
+            .about-me-container {
+                flex-direction: column;
+            }
 
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">venkatasaiprashanthpilla@my.unt.edu</a></p>
-							</section>
+            .about-me-image {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
 
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									
-									<li><a href="https://www.linkedin.com/in/venkata-sai-prashanth-p-317795197/" class="icon brands alt fa-linkedin"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/pvs156" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+            .about-me-content {
+                flex: 0 0 100%;
+            }
 
-				<!-- Copyright -->
-				<div id="copyright">
-					<ul><li>&copy; Untitled</li><li>Venkata Sai Prashanth</li></ul>
+                .about-me-content h1 {
+                    text-align: center;
+                    font-size: 1.8rem; /* Reduced from 2.2rem */
+                }
+
+            .about-me-text .intro {
+                font-size: 1.2rem; /* Reduced from 1.5rem */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-me-section {
+                padding: 30px 15px;
+            }
+
+            .about-me-content h1 {
+                font-size: 1.6rem; /* Reduced from 2rem */
+            }
+
+            .about-me-text p {
+                font-size: 0.9rem; /* Reduced from 1rem */
+            }
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .intro-text {
+            flex: 1;
+            padding: 20px;
+            color: black;
+        }
+
+            .intro-text h1 {
+                font-size: 2em;
+                margin-bottom: 10px;
+                color: #00bfff;
+            }
+
+            .intro-text p {
+                font-size: 1em;
+                line-height: 1.6;
+            }
+
+        .intro-image {
+            flex: 1;
+            text-align: center;
+        }
+
+            .intro-image img {
+                width: 80%;
+                max-width: 400px;
+                border-radius: 10px;
+            }
+
+		.image.main img {
+			width: 50%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .project-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+			.project-card img {
+				width: 100%;
+				border-radius: 10px;
+			}
+
+			.project-card h2 {
+				font-size: 1.5em;
+				margin: 10px 0 5px;
+			}
+
+			.project-card p {
+				font-size: 0.9em;
+				color: #555;
+			}
+
+		section {
+			padding: 50px 20px;
+		}
+
+		.skills-icons {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: center;
+		}
+
+			.skills-icons li {
+				list-style: none;
+				text-align: center;
+			}
+
+		.skill-icon {
+			font-size: 2em;
+			margin-bottom: 5px;
+		}
+
+		.skill-label {
+			font-weight: bold;
+		}
+
+		.carousel-container {
+			overflow: hidden;
+			padding: 20px;
+			background-color: white;
+		}
+
+		.carousel {
+			display: flex;
+			gap: 20px;
+			animation: scroll 20s linear infinite;
+		}
+
+		.skill-card {
+			background-color: white;
+			color: black;
+			padding: 20px;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-width: 150px;
+			transition: transform 0.3s;
+		}
+
+			.skill-card:hover {
+				transform: scale(1.1);
+				animation-play-state: paused;
+			}
+
+		@keyframes scroll {
+			from {
+				transform: translateX(0);
+			}
+
+			to {
+				transform: translateX(-100%);
+			}
+		}
+
+		h1 {
+			text-align: center;
+			margin: 20px 0;
+		}
+
+		.skill-icon {
+			width: 40px;
+			height: 40px;
+			margin-bottom: 10px;
+		}
+        .timeline {
+            position: relative;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background-color: #00bfff;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3px;
+            }
+
+        .timeline-container {
+            padding: 20px 30px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+            .timeline-container.left {
+                left: 0;
+            }
+
+            .timeline-container.right {
+                left: 50%;
+            }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: #1e1e2f;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: white;
+            border: 4px solid #00bfff;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-container.right::after {
+            left: -13px;
+        }
+
+        .experience-title {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .Company-name {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #bbb;
+        }
+
+        .experience-date {
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+
+        .experience-details {
+            color: white;
+            list-style: disc;
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+
+        .actions {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button.icon.solid.solo.fa-arrow-up.scrolly {
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+            .button.icon.solid.solo.fa-arrow-up.scrolly:hover {
+                background-color: #333;
+            }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+
+     
+	</style>
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Venkata Sai Prashanth's Portfolio</h1>
+			<p>A showcase of my projects and skills in AI, Data Analysis, and Machine Learning.</p>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Explore More</a></li>
+			</ul>
+		</div>
+
+		<!-- Header -->
+		<header id="header">
+			<a href="#" class="logo">Prashanth's Work</a>
+		</header>
+
+		<!-- Navigation -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="#intro">Home</a></li>
+				<li><a href="#work-experience">Work Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">projects</a></li>
+				<li><a href="#about-me">About Me</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/venkata-sai-prashanth-p-317795197/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/pvs156" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main Content -->
+		<div id="main">
+			<section class="intro-section">
+				<div class="intro-text">
+					<h1>AI & Software Enthusiast</h1>
+					<p>Hello! I'm Prashanth, a passionate AI and Software Engineer specializing in machine learning, data analysis, and backend development. My expertise lies in solving complex problems, optimizing systems, and crafting innovative solutions. I thrive on collaboration, continuous learning, and applying data-driven strategies to deliver impactful results. Combining technical acumen with strong communication and adaptability, I aim to bridge the gap between technology and real-world applications.</p>
 				</div>
+				<div class="intro-image">
+					<img src="images/myimg1.jpg" alt="Prashanth's Profile Picture">
+				</div>
+			</section>
 
+			<!-- Work Experience Section -->
+			<section id="work-experience">
+				<h1>Work Experience</h1>
+				<div class="timeline">
+
+					<div class="timeline-container left">
+						<div class="timeline-content">
+							<h3 class="experience-title">Spark Student Assistant</h3>
+							<h3 class="Company-name">University of North Texas</h3>
+							<p class="experience-date">Jan 2024 - Present</p>
+							<ul class="experience-details">
+								<li>Provided technical support.</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-container right">
+						<div class="timeline-content">
+							<h3 class="experience-title">Software Engineer Trainee</h3>
+							<h3 class="Company-name">FIS Global</h3>
+							<p class="experience-date">June 2022 - Present</p>
+							<ul class="experience-details">
+								<li>Contributed to enterprise IT projects.</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-container left">
+						<div class="timeline-content">
+							<h3 class="experience-title">Programmer Analyst</h3>
+							<h3 class="Company-name">Cognizant</h3>
+							<p class="experience-date">March 2022 - June 2022</p>
+							<ul class="experience-details">
+								<li>Developed software modules.</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-container right">
+						<div class="timeline-content">
+							<h3 class="experience-title">Intern</h3>
+							<h3 class="Company-name">Tequed Labs</h3>
+							<p class="experience-date">May 2020 - Dec 2020</p>
+							<ul class="experience-details">
+								<li>Worked on web development projects.</li>
+
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+			<!-- Skills Section -->
+
+
+			<section id="skills">
+				<h1>Skills</h1>
+				<div class="carousel-container">
+					<div class="carousel">
+						<div class="skill-card"><img src="images/python-logo.png" class="skill-icon">Python</div>
+						<div class="skill-card"><img src="images/sql-logo.png" alt="SQL Logo" class="skill-icon">SQL</div>
+						<div class="skill-card"><img src="images/java-logo.png" alt="Java Logo" class="skill-icon">Java</div>
+						<div class="skill-card"><img src="images/r-logo.png" alt="R Logo" class="skill-icon">R</div>
+						<div class="skill-card"><img src="images/c-logo.png" alt="C Logo" class="skill-icon">C</div>
+						<div class="skill-card"><img src="images/git-logo.png" alt="Git Logo" class="skill-icon">Git</div>
+						<div class="skill-card"><img src="images/docker-logo.png" alt="Docker Logo" class="skill-icon">Docker</div>
+						<div class="skill-card"><img src="images/kubernetes-logo.png" alt="Kubernetes Logo" class="skill-icon">Kubernetes</div>
+						<div class="skill-card"><img src="images/databricks-logo.png" alt="Databricks Logo" class="skill-icon">Databricks</div>
+						<div class="skill-card"><img src="images/aws-logo.png" alt="AWS Logo" class="skill-icon">AWS</div>
+						<div class="skill-card"><img src="images/azure-logo.png" alt="Azure Logo" class="skill-icon">Azure</div>
+						<div class="skill-card"><img src="images/tensorflow-logo.png" alt="TensorFlow Logo" class="skill-icon">TensorFlow</div>
+						<div class="skill-card"><img src="images/pytorch-logo.png" alt="PyTorch Logo" class="skill-icon">PyTorch</div>
+						<div class="skill-card"><img src="images/django-logo.png" alt="Django" class="skill-icon">DjangoL</div>
+						<div class="skill-card"><img src="images/mysql-logo.png" alt="Mysql logo" class="skill-icon">MySQL</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Projects Section -->
+			<section id="projects">
+				<header><h1 style="text-align: center;">Projects</h1></header>
+				<p class="highlight" style="text-align: center">"Where data meets curiosity, stories unfold."</p>
+				<div class="project-grid">
+					<div class="project-card">
+						<img src="images/Ai_dietician.jpg" alt="AI Dietician Project Screenshot" />
+						<h2>AI Dietician</h2>
+						<p>Personalized meal recommendations using AI to promote healthier lifestyles.</p>
+					</div>
+					<div class="project-card">
+						<img src="images/placement_data1.jpeg" alt="Placement Data Analysis Visualization" />
+						<h2>Placement Data Analysis</h2>
+						<p>Unveiling trends and insights from historical placement data.</p>
+					</div>
+					<div class="project-card">
+						<img src="images/house_price_prediction.jpeg" alt="House Price Prediction Data Chart" />
+						<h2>House Price Prediction</h2>
+						<p>Predicting property values through machine learning algorithms.</p>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- About Me Section -->
+			<section id="about-me" class="about-me-section">
+				<div class="about-me-container">
+					<div class="about-me-image">
+						 <img src="images/me.jpeg" alt="Prashanth kayaking" class="rounded-image"> 
+						<!-- <img src="images/hike.jpeg" alt="Prashanth kayaking" class="rounded-image"> -->
+					</div>
+					<div class="about-me-content">
+						<h1>ABOUT ME</h1>
+						<div class="about-me-text">
+							<p class="intro">Hey there, I'm Prashanth!</p>
+
+							<p>If curiosity had a face, it’d probably be mine, always wondering how technology works and how it can make life a little cooler. I’m all about AI, software development, and data analytics. Basically, if it involves data, I’m either decoding it or building something awesome with it..</p>
+							<p>I thrive on those “aha!” moments after hours of head-scratching (fueled by questionable amounts of coffee). Breaking down complex problems, optimizing systems, and watching ideas come to life? That’s my jam.</p>
+							<p>When I’m not coding or diving into new projects, you’ll find me hiking trails, battling it out on pickleball and badminton courts, or unwinding with a good playlist and some fresh air.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="contact">
+					<h3>Contact Me</h3>
+					<p>Email: <a href="mailto:venkatasaiprashanthpilla@my.unt.edu">venkatasaiprashanthpilla@my.unt.edu</a></p>
+					<p>Phone: <a href="tel:+19452467782">(945) 246-7782</a></p>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/venkata-sai-prashanth-p-317795197/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/pvs156" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</footer>
+
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-up scrolly">Back to Top</a></li>
+			</ul>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; 2024 Venkata Sai Prashanth Pilla</li></ul>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		const acc = document.getElementsByClassName("accordion");
+		for (let i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				for (let j = 0; j < acc.length; j++) {
+					if (i !== j) {
+						acc[j].classList.remove("active");
+						acc[j].nextElementSibling.style.display = "none";
+					}
+				}
+				this.classList.toggle("active");
+				const panel = this.nextElementSibling;
+				panel.style.display = panel.style.display === "block" ? "none" : "block";
+			});
+		}
+	</script>
+
+
+</body>
 </html>
