@@ -159,9 +159,10 @@
 
         .project-grid {
             display: grid;
+            /* Creates columns of at least 250px, each filling remaining space */
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            align-items: center;
+            align-items: stretch; /* Changed from center to stretch */
             padding: 20px;
         }
 
@@ -169,8 +170,11 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 15px;
-            align-items: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Make each card a flex container so content can expand to match heights */
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box; /* Helps keep sizing consistent */
         }
 
             .project-card:hover {
@@ -178,20 +182,23 @@
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             }
 
-			.project-card img {
-				width: 100%;
-				border-radius: 10px;
-			}
+            .project-card img {
+                width: 100%;
+                border-radius: 10px;
+                object-fit: cover; /* Helps if images have different aspect ratios */
+            }
 
-			.project-card h2 {
-				font-size: 1.5em;
-				margin: 10px 0 5px;
-			}
+            .project-card h2 {
+                font-size: 1.5em;
+                margin: 10px 0 5px;
+            }
 
-			.project-card p {
-				font-size: 0.9em;
-				color: #555;
-			}
+            .project-card p {
+                font-size: 0.9em;
+                color: #555;
+                flex-grow: 1; /* Allows the text to expand and keep cards even in height */
+            }
+
 
 		section {
 			padding: 50px 20px;
@@ -375,7 +382,7 @@
 
      
 	</style>
-	</style>
+	
 </head>
 <body class="is-preload">
 
@@ -426,62 +433,65 @@
 				</div>
 			</section>
 
-			<!-- Work Experience Section -->
 			<section id="work-experience">
 				<h1>Work Experience</h1>
 				<div class="timeline">
 
-					<div class="timeline-container left">
-						<div class="timeline-content">
-							<h3 class="experience-title">Spark Student Assistant</h3>
-							<h3 class="Company-name">University of North Texas</h3>
-							<p class="experience-date">Jan 2024 - Present</p>
-							<ul class="experience-details">
-								<li>Provided technical support.</li>
-
+					<!-- Timeline Item 1 (odd: left) -->
+					<div class="timeline-item">
+						<div class="date">Jan 2024 – Present</div>
+						<div class="dot"></div>
+						<div class="content">
+							<h3>Spark Student Assistant</h3>
+							<h4>University of North Texas</h4>
+							<ul>
+								<!--<li>Provided technical support.</li>-->
 							</ul>
 						</div>
 					</div>
 
-					<div class="timeline-container right">
-						<div class="timeline-content">
-							<h3 class="experience-title">Software Engineer Trainee</h3>
-							<h3 class="Company-name">FIS Global</h3>
-							<p class="experience-date">June 2022 - Present</p>
-							<ul class="experience-details">
-								<li>Contributed to enterprise IT projects.</li>
-
+					<!-- Timeline Item 2 (even: right) -->
+					<div class="timeline-item">
+						<div class="date">June 2022 – Present</div>
+						<div class="dot"></div>
+						<div class="content">
+							<h3>Software Engineer Trainee</h3>
+							<h4>FIS Global</h4>
+							<ul>
+								<!--<li>Contributed to enterprise IT projects.</li>-->
 							</ul>
 						</div>
 					</div>
 
-					<div class="timeline-container left">
-						<div class="timeline-content">
-							<h3 class="experience-title">Programmer Analyst</h3>
-							<h3 class="Company-name">Cognizant</h3>
-							<p class="experience-date">March 2022 - June 2022</p>
-							<ul class="experience-details">
-								<li>Developed software modules.</li>
-
+					<!-- Timeline Item 3 (odd: left) -->
+					<div class="timeline-item">
+						<div class="date">March 2022 – June 2022</div>
+						<div class="dot"></div>
+						<div class="content">
+							<h3>Programmer Analyst</h3>
+							<h4>Cognizant</h4>
+							<ul>
+								<!--<li>Developed software modules.</li>-->
 							</ul>
 						</div>
 					</div>
 
-					<div class="timeline-container right">
-						<div class="timeline-content">
-							<h3 class="experience-title">Intern</h3>
-							<h3 class="Company-name">Tequed Labs</h3>
-							<p class="experience-date">May 2020 - Dec 2020</p>
-							<ul class="experience-details">
-								<li>Worked on web development projects.</li>
-
+					<!-- Timeline Item 4 (even: right) -->
+					<div class="timeline-item">
+						<div class="date">May 2020 – Dec 2020</div>
+						<div class="dot"></div>
+						<div class="content">
+							<h3>Intern</h3>
+							<h4>Tequed Labs</h4>
+							<ul>
+								<!--<li>Worked on web development projects.</li>-->
 							</ul>
 						</div>
 					</div>
-
 
 				</div>
 			</section>
+
 			<!-- Skills Section -->
 
 
@@ -511,42 +521,84 @@
 
 			<!-- Projects Section -->
 			<section id="projects">
-				<header><h1 style="text-align: center;">Projects</h1></header>
-				<p class="highlight" style="text-align: center">"Where data meets curiosity, stories unfold."</p>
+				<header>
+					<h1 style="text-align: center;">Projects</h1>
+				</header>
+				<p class="highlight" style="text-align: center;">
+					"Where data meets curiosity, stories unfold."
+				</p>
+
 				<div class="project-grid">
+
+					<!-- Card 1 -->
+					<div class="project-card">
+						<img src="images/Ai_dietician.jpg" alt="AI Dietician Project Screenshot" />
+						<h2>ToxiGAN</h2>
+						<p>
+							Developed a Conditional Wasserstein GAN (CWGAN-GP) to generate 60,000+ high-fidelity synthetic toxicology records, expanding dataset size by 18,591% and validating realism using RMSE & Cosine Similarity (1.0).
+						</p>
+					</div>
+
+					<!-- Card 2 -->
 					<div class="project-card">
 						<img src="images/Ai_dietician.jpg" alt="AI Dietician Project Screenshot" />
 						<h2>AI Dietician</h2>
-						<p>Personalized meal recommendations using AI to promote healthier lifestyles.</p>
+						<p>
+							Developed an AI-powered dietician using KNN to generate personalized meal plans based on user health metrics, optimizing nutrition recommendations with real-time analysis.
+						</p>
 					</div>
+
+					<!-- Card 3 -->
+					<div class="project-card">
+						<img src="images/placement_data1.jpeg" alt="Placement Data Analysis Visualization" />
+						<h2>Aviation Accidents Analysis</h2>
+						<p>
+							Unveiling trends and insights from historical placement data.
+						</p>
+					</div>
+
+					<!-- Card 4 -->
 					<div class="project-card">
 						<img src="images/placement_data1.jpeg" alt="Placement Data Analysis Visualization" />
 						<h2>Placement Data Analysis</h2>
-						<p>Unveiling trends and insights from historical placement data.</p>
+						<p>
+							Unveiling trends and insights from historical placement data.
+						</p>
 					</div>
+
+					<!-- Card 5 -->
 					<div class="project-card">
 						<img src="images/house_price_prediction.jpeg" alt="House Price Prediction Data Chart" />
 						<h2>House Price Prediction</h2>
-						<p>Predicting property values through machine learning algorithms.</p>
+						<p>
+							Predicting property values through machine learning algorithms.
+						</p>
 					</div>
+
 				</div>
 			</section>
 
 
 			<!-- About Me Section -->
 			<section id="about-me" class="about-me-section">
-				<div class="about-me-container">
-					<div class="about-me-image">
-						 <img src="images/me.jpeg" alt="Prashanth kayaking" class="rounded-image"> 
-						<!-- <img src="images/hike.jpeg" alt="Prashanth kayaking" class="rounded-image"> -->
+				<!-- Inline styles on container and image to reduce size -->
+				<div class="about-me-container" style="display: flex; gap: 40px; align-items: flex-start;">
+					<div class="about-me-image" style="flex: 0 0 40%; max-width: 40%;">
+						<img src="images/me1.jpeg"
+							 alt="Prashanth kayaking"
+							 class="rounded-image"
+							 style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;">
 					</div>
 					<div class="about-me-content">
-						<h1>ABOUT ME</h1>
+						
 						<div class="about-me-text">
+							<h1>Something About Me</h1>
 							<p class="intro">Hey there, I'm Prashanth!</p>
 
 							<p>If curiosity had a face, it’d probably be mine, always wondering how technology works and how it can make life a little cooler. I’m all about AI, software development, and data analytics. Basically, if it involves data, I’m either decoding it or building something awesome with it..</p>
+
 							<p>I thrive on those “aha!” moments after hours of head-scratching (fueled by questionable amounts of coffee). Breaking down complex problems, optimizing systems, and watching ideas come to life? That’s my jam.</p>
+
 							<p>When I’m not coding or diving into new projects, you’ll find me hiking trails, battling it out on pickleball and badminton courts, or unwinding with a good playlist and some fresh air.</p>
 						</div>
 					</div>
