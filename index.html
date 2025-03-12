@@ -157,47 +157,59 @@
 			margin: 0 auto;
 		}
 
-        .project-grid {
-            display: grid;
-            /* Creates columns of at least 250px, each filling remaining space */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            align-items: stretch; /* Changed from center to stretch */
-            padding: 20px;
-        }
+     	
+		/* Container that holds each card (optional) */
+/* .project-grid {
+  display: flex;
+  flex-direction: column; /* If you want each card stacked vertically 
+  gap: 20px;
+} */
 
-        .project-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Make each card a flex container so content can expand to match heights */
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box; /* Helps keep sizing consistent */
-        }
+		/* Single card: image left, text on right */
+		.project-card {
+  			display: flex;            /* Horizontal layout inside the card */
+  			align-items: flex-start;  /* Top-align image & text */
+  			border: 1px solid #ddd;
+  			border-radius: 10px;
+  			padding: 15px;
+  			gap: 15px;                /* Spacing between image & text container */
+  			margin-bottom: 15px;      /* Space between cards if stacked */
+  			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
 
-            .project-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }
+		.project-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+		}
 
-            .project-card img {
-                width: 100%;
-                border-radius: 10px;
-                object-fit: cover; /* Helps if images have different aspect ratios */
-            }
+		/* Image on the left */
+		.project-card img {
+			width: 350px;             /* Adjust as you like (e.g. 100px, 150px) */
+			height: auto;
+			object-fit: cover;        /* Crop if aspect ratio differs */
+			border-radius: 25px;       /* Slight rounding if you like */
+		}
 
-            .project-card h2 {
-                font-size: 1.5em;
-                margin: 10px 0 5px;
-            }
+		/* Text container on the right */
+		.project-content {
+			display: flex;
+			flex-direction: column;   /* Title on top, description below */
+			flex: 1;                  /* Fills remaining space horizontally */
+		}
 
-            .project-card p {
-                font-size: 0.9em;
-                color: #555;
-                flex-grow: 1; /* Allows the text to expand and keep cards even in height */
-            }
+		.project-content h2 {
+			margin: 0 0 0.5rem 0;     /* Title spacing: top=0, bottom=0.5rem */
+			font-size: 1.3em;
+		}
+
+		.project-content p {
+			margin: 0;                /* Remove extra paragraph margin */
+			font-size: 0.9em;
+			color: #555;
+		}
+
+
+
 
 
 		section {
@@ -528,52 +540,56 @@
 					"Where data meets curiosity, stories unfold."
 				</p>
 
+				
+				  
+
 				<div class="project-grid">
 
 					<!-- Card 1 -->
 					<div class="project-card">
-						<img src="images/Ai_dietician.jpg" alt="AI Dietician Project Screenshot" />
+						<img src="images/ToxiGan.jpg" alt="AI Dietician Project Screenshot" />
+						<div class="project-info">
 						<h2>ToxiGAN</h2>
 						<p>
 							Developed a Conditional Wasserstein GAN (CWGAN-GP) to generate 60,000+ high-fidelity synthetic toxicology records, expanding dataset size by 18,591% and validating realism using RMSE & Cosine Similarity (1.0).
 						</p>
 					</div>
+					</div>
 
 					<!-- Card 2 -->
 					<div class="project-card">
 						<img src="images/Ai_dietician.jpg" alt="AI Dietician Project Screenshot" />
+						<div class="project-info">
 						<h2>AI Dietician</h2>
 						<p>
 							Developed an AI-powered dietician using KNN to generate personalized meal plans based on user health metrics, optimizing nutrition recommendations with real-time analysis.
 						</p>
 					</div>
+					</div>
 
 					<!-- Card 3 -->
 					<div class="project-card">
-						<img src="images/placement_data1.jpeg" alt="Placement Data Analysis Visualization" />
+						<img src="images/DALL·E.jpg" alt="Placement Data Analysis Visualization" />
+						<div class="project-info">
 						<h2>Aviation Accidents Analysis</h2>
 						<p>
-							Unveiling trends and insights from historical placement data.
+							Analyzed 50,013 aviation accident records using Power BI & Python, performing EDA, correlation modeling, and risk profiling to identify key safety factors. Uncovered trends in accident severity across weather conditions, aircraft configurations, and flight phases, optimizing insights for aviation risk mitigation.
 						</p>
+					</div>
 					</div>
 
 					<!-- Card 4 -->
 					<div class="project-card">
 						<img src="images/placement_data1.jpeg" alt="Placement Data Analysis Visualization" />
+						<div class="project-info">
 						<h2>Placement Data Analysis</h2>
 						<p>
 							Unveiling trends and insights from historical placement data.
 						</p>
 					</div>
-
-					<!-- Card 5 -->
-					<div class="project-card">
-						<img src="images/house_price_prediction.jpeg" alt="House Price Prediction Data Chart" />
-						<h2>House Price Prediction</h2>
-						<p>
-							Predicting property values through machine learning algorithms.
-						</p>
 					</div>
+
+					
 
 				</div>
 			</section>
