@@ -4714,4 +4714,133 @@ input, select, textarea {
 		}
 
 	}
+	.alt-timeline {
+		max-width: 900px; /* Constrain overall width on large screens */
+		margin: 0 auto;   /* Center horizontally in the page */
+		padding: 50px 20px;
+		position: relative;
+		text-align: center; /* Center the section heading */
+	}
+	
+	.alt-timeline h1 {
+		margin-bottom: 40px;
+		font-size: 2rem;
+		color: #333;
+	}
+	
+	/* Main timeline container */
+	.timeline {
+		/* NEW: Ensure the .timeline itself is centered and doesn't exceed 900px */
+		max-width: 900px;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	/* Clear floats so items stack properly if needed */
+	.timeline::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	/* The vertical center line */
+	.timeline::before {
+		content: "";
+		position: absolute;
+		left: 50%; /* Middle of container */
+		top: 0;
+		width: 2px; /* Thickness of the line */
+		height: 100%;
+		background: #ccc; /* Color of the line */
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+	
+	/* Each timeline item is half the container's width */
+	.timeline-item {
+		position: relative;
+		width: 50%;
+		margin-bottom: 40px;
+		padding: 20px;
+		box-sizing: border-box;
+		z-index: 2; /* Above the center line */
+	}
+	
+	/* The dot on the line */
+	.dot {
+		position: absolute;
+		width: 14px;
+		height: 14px;
+		background: #fff;
+		border: 2px solid #333; /* Dot border color */
+		border-radius: 50%;
+		top: 20px; /* Adjust vertical alignment if needed */
+		z-index: 2;
+	}
+	
+	/* The left (odd) items */
+	.timeline-item:nth-child(odd) {
+		left: 0; /* Align to the container's left edge */
+		text-align: right; /* Right-align text if you prefer */
+	}
+	.timeline-item:nth-child(odd) .dot {
+		right: -7px; /* Dot is half its width offset from the line */
+	}
+	
+	/* The right (even) items */
+	.timeline-item:nth-child(even) {
+		left: 50%; /* Start at the middle of the container */
+		text-align: left; /* Left-align text if you prefer */
+	}
+	.timeline-item:nth-child(even) .dot {
+		left: -7px; /* Dot offset for the right side */
+	}
+	
+	/* Date styling */
+	.date {
+		font-weight: bold;
+		margin-bottom: 5px;
+		color: #555;
+	}
+	
+	/* Content styling */
+	.content h3 {
+		margin: 0 0 5px;
+		font-size: 1.2rem;
+		color: #444;
+	}
+	.content h4 {
+		margin: 0 0 10px;
+		font-size: 1rem;
+		color: #666;
+	}
+	.content ul {
+		margin: 0;
+		padding-left: 20px;
+		list-style: disc;
+		text-align: left; /* So bullets line up nicely even if the item is right-aligned */
+		color: #333;
+	}
+	
+	/* Responsive: stack items in one column for smaller screens */
+	@media (max-width: 768px) {
+		.timeline-item {
+			width: 100%;
+			left: 0 !important; /* Force all items to left edge */
+			text-align: left !important;
+		}
+		.timeline::before {
+			left: 20px; /* Move the line left to avoid overlaying text */
+			transform: none;
+		}
+		.dot {
+			left: 0;
+			right: auto;
+		}
+		.timeline-item:nth-child(odd),
+		.timeline-item:nth-child(even) {
+			margin-left: 40px; /* Indent so the dot is on the line */
+		}
+	}
+	
 
